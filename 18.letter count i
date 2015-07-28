@@ -1,0 +1,19 @@
+def LetterCountI(str)
+  str = str.split(" ")
+  count = 0
+  0.upto(str.length-1) do |p|
+  	a = str[p]
+    0.upto(a.length-1) do |q|
+      (q+1).upto(a.length-1) do |h|
+        if(a[q] == a[h])
+          count = count + 1
+            if(count >= 1)
+              return a
+            end
+        end
+      end
+  	end
+  end
+  return -1
+         
+end
